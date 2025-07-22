@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Malik Sajid Signals</title>
+</head>
+<body style="text-align:center; font-family:sans-serif;">
+  <h1>📈 Welcome to Malik Signals</h1>
+  <h2>Live Quotex Signals:</h2>
+  <div id="signal">Waiting for signal...</div>
+
+  <script>
+    function generateSignal() {
+      const signals = ["📉 Sell", "📈 Buy"];
+      const random = Math.floor(Math.random() * signals.length);
+      document.getElementById("signal").innerText = "Signal: " + signals[random];
+    }
+    setInterval(generateSignal, 5000); // ہر 5 سیکنڈ بعد سگنل بدلے گا
+  </script>
+</body>
+</html>
