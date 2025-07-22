@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Malik Sajid Signals</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; padding: 50px; }
+    .box { border: 2px solid #333; padding: 20px; display: inline-block; border-radius: 10px; }
+    h1 { color: darkgreen; }
+  </style>
+</head>
+<body>
+  <h1>📈 Malik Sajid Live Signals</h1>
+  <div class="box">
+    <h2>Currency Pair: <span id="pair">EUR/USD</span></h2>
+    <h2>Time Frame: <span id="timeframe">1 Minute</span></h2>
+    <h2>Signal: <span id="signal">Waiting...</span></h2>
+  </div>
+
+  <script>
+    const pairs = ["EUR/USD", "GBP/JPY", "USD/JPY", "AUD/CAD", "EUR/GBP"];
+    const timeframes = ["1 Minute", "3 Minutes", "5 Minutes"];
+    const signals = ["📈 Buy", "📉 Sell"];
+
+    function updateSignal() {
+      const pair = pairs[Math.floor(Math.random() * pairs.length)];
+      const timeframe = timeframes[Math.floor(Math.random() * timeframes.length)];
+      const signal = signals[Math.floor(Math.random() * signals.length)];
+
+      document.getElementById("pair").innerText = pair;
+      document.getElementById("timeframe").innerText = timeframe;
+      document.getElementById("signal").innerText = signal;
+    }
+
+    setInterval(updateSignal, 5000);
+    updateSignal(); // Initial call
+  </script>
+</body>
+</html>
